@@ -1,0 +1,12 @@
+{
+  ".text.bibtex": {
+    "language": {
+      "commentStart": "% ",
+      "increaseIndentPattern": "[{(]\\s*$",
+      "decreaseIndentPattern": "^\\s*[})]"
+    },
+    "bracket-matcher": {
+      "autocompleteCharacters": ["()", "{}", "\"\""]
+    }
+  }
+}

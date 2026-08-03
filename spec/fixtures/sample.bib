@@ -1,0 +1,40 @@
+% BibTeX has no comment syntax: these assertion lines are `junk` to the
+% grammar, which is why they scope as comments and why they can only sit
+% between entries. A `%` line inside an entry makes that entry unparseable,
+% so every entry here is written on one line and asserted underneath it.
+
+@string{acm = "Association for Computing Machinery"}
+% <- keyword.other.string-constant
+%      ^ punctuation.definition.entry.begin.bracket.curly
+%       ^ variable.other.constant
+%           ^ punctuation.separator.key-value
+%             ^ punctuation.definition.string.begin
+%              ^ string.quoted.double
+%                                                 ^ punctuation.definition.string.end
+%                                                  ^ punctuation.definition.entry.end.bracket.curly
+
+@preamble{"\noopsort"}
+% <- keyword.other.preamble
+%          ^ punctuation.definition.function
+%           ^ support.function
+
+@article{knuth1984, title = "Literate Programming", year = 1984}
+% <- keyword.other.entry-type
+%        ^ entity.name.type.entry-key
+%                 ^ punctuation.separator.delimiter
+%                   ^ variable.other.key
+%                            ^ string.quoted.double
+%                                                          ^ constant.numeric
+%                                                              ^ punctuation.definition.entry.end.bracket.curly
+
+@book(ross1988, publisher = acm # " Press")
+%    ^ punctuation.definition.entry.begin.bracket.round
+%     ^ entity.name.type.entry-key
+%               ^ variable.other.key
+%                           ^ variable.other.reference
+%                               ^ keyword.operator.concatenation
+%                                         ^ punctuation.definition.entry.end.bracket.round
+
+@Comment ignored text
+%^ comment.line.at-sign
+%        ^ comment.block

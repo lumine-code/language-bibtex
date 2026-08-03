@@ -1,0 +1,5 @@
+[
+  (entry)
+  (string)
+  (preamble)
+] @fold

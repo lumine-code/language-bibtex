@@ -1,0 +1,23 @@
+{
+  "name": "BibTeX",
+  "scopeName": "text.bibtex",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-bibtex",
+  "injectionRegex": "^(bibtex)$",
+  "fileTypes": ["bib", "bibtex"],
+  "comments": {
+    "start": "% "
+  },
+  "treeSitter": {
+    // Pin a tag or a full SHA, never a branch. Verify the ref is on the main
+    // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
+    // reporting `diverged` or a nonzero `behind` means it is not.
+    "parserSource": "github:latex-lsp/tree-sitter-bibtex#8d04ed27b3bc7929f14b7df9236797dab9f3fa66",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-bibtex/tree-sitter-bibtex.wasm",
+    "highlightsQuery": "tree-sitter-bibtex/highlights.scm",
+    "foldsQuery": "tree-sitter-bibtex/folds.scm",
+    "indentsQuery": "tree-sitter-bibtex/indents.scm",
+    "tagsQuery": "tree-sitter-bibtex/tags.scm"
+  }
+}
