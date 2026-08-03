@@ -9,7 +9,7 @@ keeps the `text.bibtex` scope, so anything already keyed on it keeps working.
 
 ## Features
 
-- **Grammars**: provides Tree-sitter grammars.
+- **Grammars**: provides Tree-sitter grammars, built from [tree-sitter-bibtex](https://github.com/latex-lsp/tree-sitter-bibtex).
 - **Entries**: scopes entry types, citation keys, field names and values, including `@string` constants and `@preamble`.
 - **Values**: distinguishes quoted from braced values, numbers from constant references, and highlights concatenation with `#`.
 - **Commands**: recognises TeX commands appearing inside field values.
@@ -21,8 +21,6 @@ keeps the `text.bibtex` scope, so anything already keyed on it keeps working.
 To install `language-bibtex` search for _language-bibtex_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-bibtex`.
 
 ## Usage
-
-The grammar is built from [tree-sitter-bibtex](https://github.com/latex-lsp/tree-sitter-bibtex).
 
 BibTeX has no comment syntax. `@Comment` marks only itself, and everything the reader does not recognise — including text between entries — is ignored; both are scoped as comments here, which is what they behave like.
 
