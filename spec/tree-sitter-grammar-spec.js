@@ -15,4 +15,15 @@ describe("BibTeX Tree-sitter grammar", () => {
   it("tokenizes the fixture", async () => {
     await runGrammarTests(path.join(__dirname, "fixtures", "sample.bib"), /%/);
   });
+
+  // The grammar used to live in language-latex. Consumers such as ide-texlab
+  // and navigation-panel compare this scope as an exact string rather than as
+  // a selector, so moving packages must not have changed either the scope or
+  // which grammar wins for a .bib file.
+  it("keeps the text.bibtex scope for .bib files", () => {
+    for (const filePath of ["references.bib", "references.bibtex"]) {
+      expect(atom.grammars.selectGrammar(filePath, "").scopeName).toBe("text.bibtex");
+    }
+    expect(atom.grammars.grammarForScopeName("text.bibtex")).toBeTruthy();
+  });
 });
