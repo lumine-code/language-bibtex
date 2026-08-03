@@ -1,7 +1,7 @@
 {
   "name": "BibTeX",
   "scopeName": "text.bibtex",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-bibtex",
   "injectionRegex": "^(bibtex)$",
   "fileTypes": ["bib", "bibtex"],
