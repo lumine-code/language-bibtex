@@ -26,6 +26,11 @@ The grammar is built from [tree-sitter-bibtex](https://github.com/latex-lsp/tree
 
 BibTeX has no comment syntax. `@Comment` marks only itself, and everything the reader does not recognise — including text between entries — is ignored; both are scoped as comments here, which is what they behave like.
 
+## Services
+
+- **hyperlink.injection** (`^1.0.0`): consumed to highlight URLs inside BibTeX files as clickable links.
+- **todo.injection** (`^1.0.0`): consumed to highlight `TODO`-style markers inside comments.
+
 ## Contributing
 
 Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub. Any feedback is welcome!
