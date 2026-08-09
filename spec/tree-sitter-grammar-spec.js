@@ -9,7 +9,7 @@ const path = require("path");
 
 describe("BibTeX Tree-sitter grammar", () => {
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-bibtex");
+    await lumine.packages.activatePackage("language-bibtex");
   });
 
   it("tokenizes the fixture", async () => {
@@ -22,8 +22,8 @@ describe("BibTeX Tree-sitter grammar", () => {
   // which grammar wins for a .bib file.
   it("keeps the text.bibtex scope for .bib files", () => {
     for (const filePath of ["references.bib", "references.bibtex"]) {
-      expect(atom.grammars.selectGrammar(filePath, "").scopeName).toBe("text.bibtex");
+      expect(lumine.grammars.selectGrammar(filePath, "").scopeName).toBe("text.bibtex");
     }
-    expect(atom.grammars.grammarForScopeName("text.bibtex")).toBeTruthy();
+    expect(lumine.grammars.grammarForScopeName("text.bibtex")).toBeTruthy();
   });
 });
