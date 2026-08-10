@@ -52,6 +52,12 @@ module.exports = [
       globals: {
         ...globals.jasmine,
         advanceClock: "readonly",
+        // Waiting primitives injected onto `window` by the editor's spec harness.
+        conditionPromise: "readonly",
+        emitterEventPromise: "readonly",
+        flushMicrotasks: "readonly",
+        timeoutPromise: "readonly",
+        waitForFrames: "readonly",
         // Grammar-test helpers the spec runner puts on `window`
         // (spec/helpers/normalize-comments.js in the editor).
         runGrammarTests: "readonly",
