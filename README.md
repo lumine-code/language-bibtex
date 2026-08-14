@@ -2,10 +2,7 @@
 
 BibTeX language support.
 
-Bibliography databases used to be covered by a TextMate grammar inside
-`language-latex` that could not parse `@preamble` and treated every value as one
-undifferentiated blob. This package replaces it with a Tree-sitter grammar and
-keeps the `text.bibtex` scope, so anything already keyed on it keeps working.
+Bibliography databases used to be covered by a TextMate grammar inside `language-latex` that could not parse `@preamble` and treated every value as one undifferentiated blob. This package replaces it with a Tree-sitter grammar and keeps the `text.bibtex` scope, so anything already keyed on it keeps working.
 
 ## Features
 
@@ -18,7 +15,7 @@ keeps the `text.bibtex` scope, so anything already keyed on it keeps working.
 
 ## Installation
 
-To install `language-bibtex` search for _language-bibtex_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-bibtex`.
+To install `language-bibtex` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-bibtex`.
 
 ## Usage
 
@@ -26,8 +23,8 @@ BibTeX has no comment syntax. `@Comment` marks only itself, and everything the r
 
 ## Services
 
-- **hyperlink.injection** (`^1.0.0`): consumed to highlight URLs inside BibTeX files as clickable links.
-- **todo.injection** (`^1.0.0`): consumed to highlight `TODO`-style markers inside comments.
+- `hyperlink.injection`: consumed to highlight URLs inside BibTeX files as clickable links.
+- `todo.injection`: consumed to highlight `TODO`-style markers inside comments.
 
 ## Contributing
 
