@@ -13,7 +13,7 @@
     // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
     // reporting `diverged` or a nonzero `behind` means it is not.
     "parserSource": "github:latex-lsp/tree-sitter-bibtex#8d04ed27b3bc7929f14b7df9236797dab9f3fa66",
-    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
     "grammar": "tree-sitter-bibtex/tree-sitter-bibtex.wasm",
     "highlightsQuery": "tree-sitter-bibtex/highlights.scm",
     "foldsQuery": "tree-sitter-bibtex/folds.scm",
