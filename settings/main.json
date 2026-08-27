@@ -1,12 +1,12 @@
 {
   ".text.bibtex": {
-    "language": {
+    "bracket-matcher": {
+      "autocompleteCharacters": ["()", "{}", "\"\""]
+    },
+    "editor": {
       "commentStart": "% ",
       "increaseIndentPattern": "[{(]\\s*$",
       "decreaseIndentPattern": "^\\s*[})]"
-    },
-    "bracket-matcher": {
-      "autocompleteCharacters": ["()", "{}", "\"\""]
     }
   }
 }
