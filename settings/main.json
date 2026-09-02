@@ -4,9 +4,7 @@
       "autocompleteCharacters": ["()", "{}", "\"\""]
     },
     "editor": {
-      "commentStart": "% ",
-      "increaseIndentPattern": "[{(]\\s*$",
-      "decreaseIndentPattern": "^\\s*[})]"
+      "commentStart": "% "
     }
   }
 }

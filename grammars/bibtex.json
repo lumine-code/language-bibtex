@@ -3,7 +3,7 @@
   "scopeName": "text.bibtex",
   "type": "tree-sitter",
   "parser": "tree-sitter-bibtex",
-  "injectionRegex": "^(bibtex)$",
+  "injectionNames": ["bibtex"],
   "fileTypes": ["bib", "bibtex"],
   "comments": {
     "start": "% "
@@ -14,10 +14,10 @@
     // reporting `diverged` or a nonzero `behind` means it is not.
     "parserSource": "github:latex-lsp/tree-sitter-bibtex#8d04ed27b3bc7929f14b7df9236797dab9f3fa66",
     "wasmBuildTool": "tree-sitter-cli#v0.26.13",
-    "grammar": "tree-sitter-bibtex/tree-sitter-bibtex.wasm",
-    "highlightsQuery": "tree-sitter-bibtex/highlights.scm",
-    "foldsQuery": "tree-sitter-bibtex/folds.scm",
-    "indentsQuery": "tree-sitter-bibtex/indents.scm",
-    "tagsQuery": "tree-sitter-bibtex/tags.scm"
+    "grammar": "bibtex.wasm",
+    "highlightsQuery": "bibtex-highlights.scm",
+    "foldsQuery": "bibtex-folds.scm",
+    "indentsQuery": "bibtex-indents.scm",
+    "tagsQuery": "bibtex-tags.scm"
   }
 }
