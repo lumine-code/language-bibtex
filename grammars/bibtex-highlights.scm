@@ -86,9 +86,10 @@
 ((command_name) @punctuation.definition.function.bibtex
   (#set! adjust.endAfterFirstMatchOf "^\\\\"))
 
-(command
-  "{" @punctuation.definition.arguments.begin.bracket.curly.bibtex
-  "}" @punctuation.definition.arguments.end.bracket.curly.bibtex)
+("{" @punctuation.definition.arguments.begin.bracket.curly.bibtex
+  (#is? test.childOfType command))
+("}" @punctuation.definition.arguments.end.bracket.curly.bibtex
+  (#is? test.childOfType command))
 
 
 ; OPERATORS AND PUNCTUATION
@@ -103,15 +104,17 @@
 (string
   "=" @punctuation.separator.key-value.bibtex)
 
-(entry
-  "," @punctuation.separator.delimiter.bibtex)
+("," @punctuation.separator.delimiter.bibtex
+  (#is? test.childOfType entry))
 
-(entry
-  "{" @punctuation.definition.entry.begin.bracket.curly.bibtex
-  "}" @punctuation.definition.entry.end.bracket.curly.bibtex)
-(entry
-  "(" @punctuation.definition.entry.begin.bracket.round.bibtex
-  ")" @punctuation.definition.entry.end.bracket.round.bibtex)
+("{" @punctuation.definition.entry.begin.bracket.curly.bibtex
+  (#is? test.childOfType entry))
+("}" @punctuation.definition.entry.end.bracket.curly.bibtex
+  (#is? test.childOfType entry))
+("(" @punctuation.definition.entry.begin.bracket.round.bibtex
+  (#is? test.childOfType entry))
+(")" @punctuation.definition.entry.end.bracket.round.bibtex
+  (#is? test.childOfType entry))
 (string
   "{" @punctuation.definition.entry.begin.bracket.curly.bibtex
   "}" @punctuation.definition.entry.end.bracket.curly.bibtex)
