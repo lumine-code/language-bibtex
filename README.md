@@ -21,10 +21,10 @@ To install `language-bibtex` search for it in the Install pane of the Lumine set
 
 BibTeX has no comment syntax. `@Comment` marks only itself, and everything the reader does not recognise — including text between entries — is ignored; both are scoped as comments here, which is what they behave like.
 
-## Services
+## Injections
 
-- `hyperlink.injection`: consumed to highlight URLs inside BibTeX files as clickable links.
-- `todo.injection`: consumed to highlight `TODO`-style markers inside comments.
+- Static Tree-sitter injections highlight URLs with `language-hyperlink`.
+- Static Tree-sitter injections highlight comment markers with `language-todo`.
 
 ## Contributing
 

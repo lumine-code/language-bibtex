@@ -16,6 +16,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "bibtex.wasm",
     "highlightsQuery": "bibtex-highlights.scm",
+    "injectionsQuery": "bibtex-injections.scm",
     "foldsQuery": "bibtex-folds.scm",
     "indentsQuery": "bibtex-indents.scm",
     "tagsQuery": "bibtex-tags.scm"

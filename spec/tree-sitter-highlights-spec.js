@@ -27,11 +27,14 @@ describe("BibTeX Tree-sitter highlights", () => {
     expect(
       editor.scopeDescriptorForBufferPosition([3000, delimiterColumn]).getScopesArray(),
     ).toContain("punctuation.separator.delimiter.bibtex");
-    const groups = await editor.getGrammarQueryCaptureGroups("highlightsQuery", {
-      startPosition: new Point(3000, 0),
-      endPosition: new Point(3006, 0),
-    });
-    const captures = groups.find(({ grammar }) => grammar === editor.getGrammar()).captures;
+    const queryCaptures = (await editor.getGrammar().getQuery("highlightsQuery")).captures(
+      editor.languageMode.tree.rootNode,
+      {
+        startPosition: new Point(3000, 0),
+        endPosition: new Point(3006, 0),
+      },
+    );
+    const captures = queryCaptures;
 
     expect(captures.length).toBeLessThanOrEqual(100);
     expect(
@@ -61,7 +64,7 @@ describe("BibTeX Tree-sitter highlights", () => {
     editor = await lumine.workspace.open("large-command.bib");
     editor.setText(lines.join("\r\n"));
     await editor.getBuffer().languageMode.ready;
-    expect((await editor.getSyntaxDiagnostics()).hasError).toBe(false);
+    expect(editor.languageMode.tree.rootNode.hasError).toBe(false);
 
     const openingColumn = editor.lineTextForBufferRow(1).lastIndexOf("{");
     expect(editor.scopeDescriptorForBufferPosition([1, openingColumn]).getScopesArray()).toContain(
@@ -73,11 +76,14 @@ describe("BibTeX Tree-sitter highlights", () => {
 
     const startRow = 2998;
     const endRow = startRow + 6;
-    const groups = await editor.getGrammarQueryCaptureGroups("highlightsQuery", {
-      startPosition: new Point(startRow, 0),
-      endPosition: new Point(endRow, 0),
-    });
-    const captures = groups.find(({ grammar }) => grammar === editor.getGrammar()).captures;
+    const queryCaptures = (await editor.getGrammar().getQuery("highlightsQuery")).captures(
+      editor.languageMode.tree.rootNode,
+      {
+        startPosition: new Point(startRow, 0),
+        endPosition: new Point(endRow, 0),
+      },
+    );
+    const captures = queryCaptures;
     expect(captures.length).toBeLessThanOrEqual(24);
     expect(
       captures.every(
