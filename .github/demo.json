@@ -1,0 +1,16 @@
+{
+  "title": "language-bibtex",
+  "description": "BibTeX syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "c3656b44aaacd68df010e601b4e9024e574f696c",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "BibTeX syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 406
+    }
+  ]
+}

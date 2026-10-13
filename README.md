@@ -13,6 +13,8 @@ Bibliography databases used to be covered by a TextMate grammar inside `language
 - **Folding**: folds each entry from the parse tree rather than by indentation.
 - **Symbols**: lists citation keys and `@string` names for symbol navigation.
 
+![BibTeX syntax highlighting at the default editor font size.](.github/demo.png)
+
 ## Installation
 
 To install `language-bibtex` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-bibtex`.
