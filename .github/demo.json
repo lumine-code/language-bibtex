@@ -1,16 +1,61 @@
 {
   "title": "language-bibtex",
-  "description": "BibTeX syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "c3656b44aaacd68df010e601b4e9024e574f696c",
+  "description": "BibTeX syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "e3f98503c7db18db00943a5182a70a66a22d1671",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "1648d456291045537523b6c9d5c1a2506d7b72db175d59ded9492f006360c0d6",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 406 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "c4d7a05fe6960ae6fb041981d6cf13e9c0286b17",
+      "dirty": true,
+      "workingTreeHash": "af0ec098e764416df9522f3c6e555050b520e4700da382b2b983b2ff3742bd0a"
+    },
+    "package": {
+      "revision": "e3f98503c7db18db00943a5182a70a66a22d1671",
+      "dirty": true,
+      "workingTreeHash": "186cc655e814760f56ce3feafc068ac9a72d47137c12870a5bf54eb32bd6c17b"
+    },
+    "language-bibtex": {
+      "revision": "e3f98503c7db18db00943a5182a70a66a22d1671",
+      "dirty": true,
+      "workingTreeHash": "186cc655e814760f56ce3feafc068ac9a72d47137c12870a5bf54eb32bd6c17b"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "25d6ed50595d6b10f7d53e41dbbe8f92dcb5c0e911871356f3e6138e5c76df57"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "references.bib",
+      "sha256": "de84ba616a8fc916e6ad7be6bc1da50c9a743c739683f371dcd25cd7e80728a3"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "BibTeX syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 406
+      "height": 406,
+      "sha256": "4ae9646ff9a5590277fb603401ce1063886cc7f0714b6e2d6fdb46c727f35271"
     }
   ]
 }
