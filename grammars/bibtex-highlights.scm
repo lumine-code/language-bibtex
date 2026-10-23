@@ -60,6 +60,13 @@
 (quote_word) @string.quoted.double.bibtex
 (brace_word) @string.quoted.other.brace.bibtex
 
+; Literal URL/DOI classification is separate from clickable-link injection.
+([(brace_word) (quote_word)] @string.other.link.bibtex
+  (#is? test.typeAt "parent token")
+  (#is? test.typeAt "parent.parent value")
+  (#is? test.typeAt "parent.parent.parent field")
+  (#is? test.matchAt "parent.parent.parent.firstNamedChild ^([Uu][Rr][Ll]|[Dd][Oo][Ii])$"))
+
 ; Only the quotes and braces delimiting a value are string punctuation; the ones
 ; around an entry or a command group are structure, and are scoped further down.
 (token
