@@ -9,7 +9,7 @@
 ; COMMENTS
 ; ========
 
-(comment) @comment.line.at-sign.bibtex
+(comment) @comment.block.at-sign.bibtex
 ((comment) @punctuation.definition.comment.bibtex
   (#set! adjust.endAfterFirstMatchOf "^@"))
 
