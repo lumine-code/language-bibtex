@@ -2,6 +2,9 @@
 Source: https://github.com/latex-lsp/tree-sitter-bibtex
 Revision: 8d04ed27b3bc7929f14b7df9236797dab9f3fa66
 
+Parser source: github:latex-lsp/tree-sitter-bibtex#8d04ed27b3bc7929f14b7df9236797dab9f3fa66
+Resolved commit: 8d04ed27b3bc7929f14b7df9236797dab9f3fa66
+
 Original file: LICENSE
 
 MIT License
