@@ -19,6 +19,7 @@
     "injectionsQuery": "bibtex-injections.scm",
     "foldsQuery": "bibtex-folds.scm",
     "indentsQuery": "bibtex-indents.scm",
+    "tagsQuerySupportsLocalPath": true,
     "tagsQuery": "bibtex-tags.scm"
   }
 }
